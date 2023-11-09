@@ -26,6 +26,7 @@ class mws():
     def match(self, path, route):
         path_parts = path.split("/")
         route_parts = route.split("/")
+        pos = 0
         if len(path_parts) != len(route_parts): return False, None
         for path_part, route_part in zip(path_parts, route_parts):
             if route_part.startswith("{") and route_part.endswith("}"):
