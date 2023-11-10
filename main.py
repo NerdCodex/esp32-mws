@@ -1,5 +1,5 @@
 from MWS.webserver import mws
-from MWS.render_template import *
+from MWS.templating import *
 
 app = mws()
 
