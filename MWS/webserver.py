@@ -50,4 +50,5 @@ class mws():
         print(f"Server is at: http://{host}:{port}/")
         while True:
             connection, addr = server.accept()
+            print("Connection from", addr)
             self.handle_request(connection)
