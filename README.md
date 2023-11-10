@@ -108,11 +108,12 @@ except ImportError:
 App = mws()
 
 # Define a route for the home page
-def home():
-    return render("/sd/templates/index.html")
+def home(urlargs):
+    name = urlargs.get("{name}")
+    return render("/sd/templates/index.html", var={"name":name})
 
 # Add the home route to the web server
-App.add_route("/", home)
+App.add_route("/{name}", home)
 
 # Run the web server on the specified IP address and port 80
 if __name__ == "__main__":
