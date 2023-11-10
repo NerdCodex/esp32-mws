@@ -1,2 +1,2 @@
 from . import webserver
-from . import render_template
+from . import templating
