@@ -48,8 +48,11 @@ Double-check the connections with the documentation for your specific ESP32 boar
 1. Connect the SD card to your computer and copy the **MWS folder** to the SD card.
 
 2. Install Thonny on your computer and connect your ESP32 to it.
+   
+3. Include the `sdcard.py` file to esp32, which serves as the driver for the ESP32 SD card slot.
 
-3. Perform necessary firmware updates and edit the `boot.py` file:
+4. Perform necessary firmware updates and edit the `boot.py` file:
+
 
 ```python
 # Add this to boot.py
@@ -75,7 +78,7 @@ import network, esp, gc
 import sys
 
 # WiFi credentials
-ssid = "ESP-32-DATASERVER"
+ssid = "ESP32-MWS"
 passwd = ""
 
 # Configure ESP32 as an access point (AP)
@@ -95,14 +98,14 @@ sys.path.append("/sd")
 
 try:
     # Import necessary modules from the EWS package
-    from EWS.webserver import *
-    from EWS.render_template import *
+    from MWS.webserver import *
+    from MWS.render_template import *
 
 except ImportError:
     print("Unable to Import EWS Web Server.")
 
 # Create an instance of the EWS web server
-App = ews()
+App = mws()
 
 # Define a route for the home page
 def home():
