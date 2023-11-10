@@ -110,7 +110,7 @@ App = mws()
 # Define a route for the home page
 def home(urlargs):
     name = urlargs.get("{name}")
-    return render("/sd/templates/index.html", var={"name":name})
+    return render("/sd/templates/index.html", name=name)
 
 # Add the home route to the web server
 App.add_route("/{name}", home)
