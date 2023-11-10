@@ -126,3 +126,6 @@ Now, after running the script, you'll see the "Web Server URL" printed in the co
 ## Contribution
 
 Contributions to the MicroPython WebServer project are welcome. Please refer to the project repository for guidelines on how to contribute.
+
+## Note
+This repository, maintained by a college student from India, houses a web framework created in an unprofessional way. Some functions are intended to be very basic, reflecting the humble spark that ignited this project when the student first learned about the ESP32 microcontroller.
